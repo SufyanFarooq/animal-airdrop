@@ -124,6 +124,56 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
+/* Custom table styles for glass effect */
+.custom-table {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 8px !important;
+}
+
+.custom-table .ant-table {
+  background: transparent !important;
+}
+
+.custom-table .ant-table-thead > tr > th {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #000000 !important;
+  font-weight: bold !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.custom-table .ant-table-tbody > tr > td {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #000000 !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.custom-table .ant-table-tbody > tr:hover > td {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.custom-table .ant-pagination {
+  color: #ffffff !important;
+}
+
+.custom-table .ant-pagination .ant-pagination-item {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.custom-table .ant-pagination .ant-pagination-item-active {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: #3b82f6 !important;
+}
+
+.custom-table .ant-pagination .ant-pagination-prev,
+.custom-table .ant-pagination .ant-pagination-next {
+  color: #ffffff !important;
+}
+
 /* Responsive navbar styles */
 @media (max-width: 640px) {
   .ant-menu-horizontal {

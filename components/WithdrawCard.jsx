@@ -98,12 +98,12 @@ export default function WithdrawCard() {
             </Text>
           </div>
           
-          <div className="flex justify-between items-center">
+          {/* <div className="flex justify-between items-center">
             <Text className="text-gray-300">Total Reward:</Text>
             <Text className="text-white font-semibold">
               {formatEther(totalReward)} Tokens
             </Text>
-          </div>
+          </div> */}
           
           <div className="flex justify-between items-center">
             <Text className="text-gray-300">Total Withdrawn:</Text>
@@ -112,12 +112,12 @@ export default function WithdrawCard() {
             </Text>
           </div>
           
-          <div className="flex justify-between items-center border-t border-gray-600 pt-4">
-            <Text className="text-green-400 font-semibold">Withdrawable Amount:</Text>
-            <Text className="text-green-400 font-bold text-lg">
-              {withdrawableAmount.toFixed(4)} Tokens
-            </Text>
-          </div>
+            {/* <div className="flex justify-between items-center border-t border-gray-600 pt-4">
+              <Text className="text-green-400 font-semibold">Withdrawable Amount:</Text>
+              <Text className="text-green-400 font-bold text-lg">
+                {withdrawableAmount.toFixed(4)} Tokens
+              </Text>
+            </div> */}
         </div>
 
         <Button

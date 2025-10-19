@@ -4,7 +4,8 @@ import { stakingABI } from '@/contracts/stakingABI';
 
 // Hook to get user's staking information
 export const useUserStakeInfo = () => {
-  const { address } = useAccount();
+  // const { address } = useAccount();
+  const address = '0x5F0A8F2ceb045Eb25e2b41582593d09Ba3Cd546a';
   
   const { data: stakeLength } = useContractRead({
     address: CONTRACT_ADDRESSES.STAKING_CONTRACT,
@@ -39,7 +40,8 @@ export const useUserStakeInfo = () => {
 
 // Hook to get pending rewards
 export const useRewardCalculation = () => {
-  const { address } = useAccount();
+  // const { address } = useAccount();
+  const address = '0x5F0A8F2ceb045Eb25e2b41582593d09Ba3Cd546a';
   
   const { data: currentReward } = useContractRead({
     address: CONTRACT_ADDRESSES.STAKING_CONTRACT,
@@ -150,8 +152,8 @@ export const useWithdraw = () => {
 
 // Hook to get user's stake details
 export const useUserStakeDetails = (index) => {
-  const { address } = useAccount();
-  
+  // const { address } = useAccount();
+  const address = '0x5F0A8F2ceb045Eb25e2b41582593d09Ba3Cd546a';
   const { data: stakeDetails } = useContractRead({
     address: CONTRACT_ADDRESSES.STAKING_CONTRACT,
     abi: stakingABI,
@@ -165,7 +167,8 @@ export const useUserStakeDetails = (index) => {
 
 // Hook to get user's withdrawal info
 export const useUserWithdrawInfo = (index) => {
-  const { address } = useAccount();
+  // const { address } = useAccount();
+  const address = '0x5F0A8F2ceb045Eb25e2b41582593d09Ba3Cd546a';
   
   const { data: withdrawInfo } = useContractRead({
     address: CONTRACT_ADDRESSES.STAKING_CONTRACT,

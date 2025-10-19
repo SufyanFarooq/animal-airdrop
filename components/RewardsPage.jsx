@@ -27,8 +27,7 @@ export default function RewardsPage() {
         <div>
           <WithdrawCard />
         </div>
-
-        {/* Network Statistics */}
+        {/* User Statistics */}
         <div>
           <UserStats />
         </div>
