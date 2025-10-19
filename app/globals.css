@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Custom styles for the staking dApp */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Custom gradient background */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Glass morphism effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+
+/* Custom button styles */
+.stake-button {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.stake-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Navbar custom styles */
+.ant-menu-horizontal {
+  background: transparent !important;
+  border: none !important;
+  line-height: 64px !important;
+}
+
+.ant-menu-horizontal .ant-menu-item {
+  color: white !important;
+  border-bottom: 2px solid transparent !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 0 20px !important;
+  margin: 0 10px !important;
+  height: 64px !important;
+  line-height: 64px !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+.ant-menu-horizontal .ant-menu-item:hover {
+  color: #3b82f6 !important;
+  border-bottom: 2px solid #3b82f6 !important;
+  background: transparent !important;
+}
+
+.ant-menu-horizontal .ant-menu-item-selected {
+  color: #3b82f6 !important;
+  border-bottom: 2px solid #3b82f6 !important;
+  background: transparent !important;
+}
+
+.ant-menu-horizontal .ant-menu-item-selected::after {
+  display: none !important;
+}
+
+.ant-menu-horizontal .ant-menu-item .ant-menu-item-icon {
+  color: inherit !important;
+  font-size: 18px !important;
+  margin-right: 8px !important;
+}
+
+/* Address text styling */
+.navbar-address {
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Responsive navbar styles */
+@media (max-width: 640px) {
+  .ant-menu-horizontal {
+    display: none !important;
+  }
+  
+  .navbar-address {
+    font-size: 12px !important;
+    padding: 2px 4px !important;
+  }
+  
+  .stake-button {
+    font-size: 12px !important;
+    padding: 4px 8px !important;
+  }
+}
