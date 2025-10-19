@@ -23,11 +23,11 @@ export default function Navbar({ activePage, setActivePage }) {
       icon: <HomeOutlined />,
       label: 'Home',
     },
-    {
-      key: 'staking',
-      icon: <PlusOutlined />,
-      label: 'Staking',
-    },
+    // {
+    //   key: 'staking',
+    //   icon: <PlusOutlined />,
+    //   label: 'Staking',
+    // },
     {
       key: 'rewards',
       icon: <TrophyOutlined />,

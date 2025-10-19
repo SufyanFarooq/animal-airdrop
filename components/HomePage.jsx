@@ -23,10 +23,10 @@ export default function HomePage() {
       {/* Hero Section */}
       <div className="text-center">
         <Title level={1} className="text-white text-4xl md:text-6xl font-bold mb-4">
-          Animal Staking Platform
+          Animal Airdrop Platform
         </Title>
         <Title level={3} className="text-gray-300 text-lg md:text-xl font-normal mb-8">
-          Stake your tokens and earn rewards on Binance Smart Chain
+          Claim your tokens and earn Animal Token rewards on Binance Smart Chain
         </Title>
       </div>
       {/* Network Statistics - Top Priority */}
@@ -36,9 +36,6 @@ export default function HomePage() {
             <Title level={2} className="text-white text-3xl font-bold mb-2">
               📊 Network Statistics
             </Title>
-            <Text className="text-gray-300 text-lg">
-              Real-time staking network overview
-            </Text>
           </div>
 
           <Row gutter={[24, 24]}>
@@ -49,44 +46,13 @@ export default function HomePage() {
                   {formatEther(totalDeposits)}
                 </div>
                 <div className="text-green-100 text-sm font-medium">
-                  Total Deposits
+                  Total Reward
                 </div>
                 <div className="text-green-200 text-xs mt-1">
                   Tokens
                 </div>
               </div>
             </Col>
-
-            <Col xs={24} sm={12} lg={8}>
-              <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-6 text-center shadow-lg">
-                <ArrowUpOutlined className="text-white text-3xl mb-3" />
-                <div className="text-white text-2xl font-bold mb-1">
-                  {formatEther(totalWithdrawals)}
-                </div>
-                <div className="text-orange-100 text-sm font-medium">
-                  Total Withdrawals
-                </div>
-                <div className="text-orange-200 text-xs mt-1">
-                  Tokens
-                </div>
-              </div>
-            </Col>
-
-            <Col xs={24} sm={12} lg={8}>
-              <div className={`bg-gradient-to-br ${netDeposits >= 0 ? 'from-blue-500 to-blue-600' : 'from-red-500 to-red-600'} rounded-xl p-6 text-center shadow-lg`}>
-                <DollarOutlined className="text-white text-3xl mb-3" />
-                <div className="text-white text-2xl font-bold mb-1">
-                  {netDeposits.toFixed(4)}
-                </div>
-                <div className="text-blue-100 text-sm font-medium">
-                  Net Deposits
-                </div>
-                <div className="text-blue-200 text-xs mt-1">
-                  Tokens
-                </div>
-              </div>
-            </Col>
-
             <Col xs={24} sm={12} lg={8}>
               <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-center shadow-lg">
                 <TeamOutlined className="text-white text-3xl mb-3" />
@@ -101,23 +67,55 @@ export default function HomePage() {
                 </div>
               </div>
             </Col>
-
             <Col xs={24} sm={12} lg={8}>
               <div className="bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl p-6 text-center shadow-lg">
                 <PercentageOutlined className="text-white text-3xl mb-3" />
                 <div className="text-white text-2xl font-bold mb-1">
-                  {percentageAll}%
+                  {formatEther(percentageAll)}%
                 </div>
                 <div className="text-pink-100 text-sm font-medium">
                   Reward Rate
                 </div>
                 <div className="text-pink-200 text-xs mt-1">
-                  Annual Percentage
+                  Percentage
                 </div>
               </div>
             </Col>
+            {/* <Col xs={24} sm={12} lg={8}>
+              <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl p-6 text-center shadow-lg">
+                <ArrowUpOutlined className="text-white text-3xl mb-3" />
+                <div className="text-white text-2xl font-bold mb-1">
+                  {formatEther(totalWithdrawals)}
+                </div>
+                <div className="text-orange-100 text-sm font-medium">
+                  Total Withdrawals
+                </div>
+                <div className="text-orange-200 text-xs mt-1">
+                  Tokens
+                </div>
+              </div>
+            </Col> */}
 
-            <Col xs={24} sm={12} lg={8}>
+            {/* <Col xs={24} sm={12} lg={8}>
+              <div className={`bg-gradient-to-br ${netDeposits >= 0 ? 'from-blue-500 to-blue-600' : 'from-red-500 to-red-600'} rounded-xl p-6 text-center shadow-lg`}>
+                <DollarOutlined className="text-white text-3xl mb-3" />
+                <div className="text-white text-2xl font-bold mb-1">
+                  {netDeposits.toFixed(4)}
+                </div>
+                <div className="text-blue-100 text-sm font-medium">
+                  Net Deposits
+                </div>
+                <div className="text-blue-200 text-xs mt-1">
+                  Tokens
+                </div>
+              </div>
+            </Col> */}
+
+            
+
+            
+
+            {/* <Col xs={24} sm={12} lg={8}>
               <div className={`bg-gradient-to-br ${allowed ? 'from-emerald-500 to-emerald-600' : 'from-red-500 to-red-600'} rounded-xl p-6 text-center shadow-lg`}>
                 {allowed ? <CheckCircleOutlined className="text-white text-3xl mb-3" /> : <CloseCircleOutlined className="text-white text-3xl mb-3" />}
                 <div className="text-white text-2xl font-bold mb-1">
@@ -130,7 +128,7 @@ export default function HomePage() {
                   Network Status
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </div>
       </Card>
@@ -143,7 +141,7 @@ export default function HomePage() {
         <div className="p-8">
           <div className="text-center mb-8">
             <Title level={2} className="text-white text-4xl font-bold mb-4">
-              💎 About Our Staking Platform
+              💎 About Our Airdrop Platform
             </Title>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
           </div>
@@ -151,8 +149,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <Paragraph className="text-gray-300 text-lg leading-relaxed mb-6">
-                Our BEP20 staking platform allows you to stake your tokens and earn passive rewards.
-                Simply connect your wallet, deposit your tokens, and watch your rewards grow over time.
+                Our BEP20 Airdrop platform allows you to claim your tokens and earn passive rewards.
+                Simply connect your wallet, claim your tokens, and watch your rewards grow over time.
                 With our secure smart contract on BSC Mainnet, your funds are always safe.
               </Paragraph>
 
@@ -214,7 +212,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-center shadow-lg">
               <div className="text-white text-3xl mb-3">📄</div>
-              <Text className="text-white font-bold text-lg mb-2">Staking Contract</Text>
+              <Text className="text-white font-bold text-lg mb-2">Airdrop Contract</Text>
               <Text className="text-blue-100 text-xs break-all">
                 0x873ef278dbb6123Aee58710e29498A19d028F32f
               </Text>
